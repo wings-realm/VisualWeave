@@ -21,9 +21,19 @@ function playNote(freq){
   osc.start();
   osc.stop(audioCtx.currentTime+dur);
   const node = audioCtx.createGain();
-  node.gain.value = 0.1;
+  node.gain.value = 0.04;
   osc.connect(node);
   node.connect(audioCtx.destination);
+}
+
+function mute(){
+  console.log(document.getElementById("volumeimage").src);
+  if(document.getElementById("volumeimage").src=="../static/images/medium-volume.png"){
+
+    document.getElementById("volumeimage").src="../static/images/mute.png";
+  }else{
+    document.getElementById("volumeimage").src="../static/images/medium-volume.png";
+  }
 }
 
 number.oninput = function() {
@@ -89,7 +99,7 @@ async function insertionSort() {
             bars[j - 1].style.background = "red";
             playNote(200+parseInt(bars[j-1].style.height));
             playNote(200+parseInt(bars[j].style.height));
-            await matteKudasai();
+            await time_break();
             bars[j].style.background = "cyan";
             bars[j - 1].style.background = "cyan";
             j--;
@@ -99,12 +109,12 @@ async function insertionSort() {
     for (var i = 0; i < bars.length; i++) {
       playNote(200+parseInt(bars[i].style.height));
         bars[i].style.background = "green";
-        await matteKudasai();
+        await time_break();
     }
     open_buttons();
 }
 
-function matteKudasai() {
+function time_break() {
     var millisec = 100-speed.value;
     return new Promise(function (resolve) {
         setTimeout(function () {
@@ -128,7 +138,7 @@ async function bubbleSort() {
                 playNote(200+parseInt(bars[j+1].style.height));
                 playNote(200+parseInt(bars[j].style.height));
             }
-            await matteKudasai();
+            await time_break();
             bars[j].style.background = "cyan";
             bars[j + 1].style.background = "cyan";
         }
@@ -138,7 +148,7 @@ async function bubbleSort() {
     for (var i = 0; i < bars.length; i++) {
       playNote(200+parseInt(bars[i].style.height));
         bars[i].style.background = "green";
-        await matteKudasai();
+        await time_break();
     }
     open_buttons();
 }
@@ -157,7 +167,7 @@ async function selectionSort() {
         for (var j = i + 1; j < bars.length; j++) {
           playNote(200+parseInt(bars[j].style.height));
             bars[j].style.background = "red";
-            await matteKudasai();
+            await time_break();
             if (mi > parseInt(bars[j].style.height)) {
                 mi = parseInt(bars[j].style.height);
                 bars[ind].style.background = "cyan";
@@ -177,7 +187,7 @@ async function selectionSort() {
     for (var i = 0; i < bars.length; i++) {
       playNote(200+parseInt(bars[i].style.height));
         bars[i].style.background = "green";
-        await matteKudasai();
+        await time_break();
     }
     open_buttons();
 }
@@ -197,30 +207,30 @@ async function MergeSorted(a, s, e) {
             a[j].style.background = "orange";
             ans.push(a[j++].style.height);
         }
-        await matteKudasai();
+        await time_break();
     }
     while (i <= mid) {
       playNote(200+parseInt(a[i].style.height));
-        await matteKudasai();
+        await time_break();
         a[i].style.background = "yellow";
         ans.push(a[i++].style.height);
     }
     while (j <= e) {
       playNote(200+parseInt(a[j].style.height));
-        await matteKudasai();
+        await time_break();
         a[j].style.background = "orange";
         ans.push(a[j++].style.height);
     }
 
     // copying
-    await matteKudasai();
+    await time_break();
     var index = s;
     for (var p = 0; p < ans.length; ++p) {
         //console.log(ans[p]);
         playNote(200+parseInt(a[index].style.height));
         a[index].style.background = "blue";
         a[index++].style.height = ans[p];
-        await matteKudasai();
+        await time_break();
     }
 }
 
@@ -241,10 +251,11 @@ async function MergeSort() {
     var bars = document.querySelectorAll(".bar");
     close_buttons();
     await mergeSort(bars, 0, bars.length - 1);
+    document.getElementById("gokut").style.opacity = 1;
     for (var i = 0; i < bars.length; i++) {
       playNote(200+parseInt(bars[i].style.height));
         bars[i].style.background = "green";
-        await matteKudasai();
+        await time_break();
     }
     open_buttons();
 }
@@ -254,15 +265,15 @@ async function swap(arr, i, j) {
     //console.log(arr[i], ",", arr[j]);
     arr[i].style.background = "red";
     arr[j].style.background = "red";
-    playNote(200+parseInt(bars[i].style.height));
-    playNote(200+parseInt(bars[j].style.height));
-    await matteKudasai();
+    playNote(200+parseInt(arr[i].style.height));
+    playNote(200+parseInt(arr[j].style.height));
+    await time_break();
     let temp = arr[i].style.height;
     arr[i].style.height = arr[j].style.height;
     arr[j].style.height = temp;
     arr[i].style.background = "cyan";
     arr[j].style.background = "cyan";
-    await matteKudasai();
+    await time_break();
 }
 
 async function QuickSort(arr, s, e) {
@@ -273,21 +284,21 @@ async function QuickSort(arr, s, e) {
     var index = Math.floor(Math.random() * (e - s + 1)) + s;
     var pivot = parseInt(arr[index].style.height);
     arr[index].style.background = "blue";
-    await matteKudasai();
+    await time_break();
     swap(arr, index, e);
     var k = s - 1;
     for (var i = s; i < e; ++i) {
-        await matteKudasai();
+        await time_break();
         if (parseInt(arr[i].style.height) < pivot) {
             swap(arr, i, ++k);
         }
     }
     swap(arr, ++k, e);
-    await matteKudasai();
+    await time_break();
     arr[index].style.background = "cyan";
     //console.log(pivot,",",k,",",s,"-",e);
     //console.log(arr);
-    await matteKudasai();
+    await time_break();
     await QuickSort(arr, s, k - 1);
     await QuickSort(arr, k + 1, e);
 }
@@ -301,35 +312,21 @@ async function quicks() {
     for (var i = 0; i < bars.length; i++) {
       playNote(200+parseInt(bars[i].style.height));
         bars[i].style.background = "green";
-        await matteKudasai();
+        await time_break();
     }
     open_buttons();
 }
-
-// heap sort code
-// A utility function to swap two elements
-async function swap2(arr, i, j) {
-    arr[i].style.background = "red";
-    arr[j].style.background = "red";
-    await matteKudasai();
-    let temp = arr[i].style.height;
-    arr[i].style.height = arr[j].style.height;
-    arr[j].style.height = temp;
-    arr[i].style.background = "cyan";
-    arr[j].style.background = "cyan";
-    await matteKudasai();
-}
-
 
 var bars = document.querySelectorAll(".bar");
 
 function close_buttons() {
     var btns = document.querySelectorAll("button");
     for(var i = 0; i < btns.length; i++) {
+
         btns[i].disabled = true;
         btns[i].style.opacity = 0.5;
     }
-
+    document.querySelector(".volumebtn").disabled=false;
     number.disabled = true;
     number.style.opacity = 0.5;
 
@@ -338,6 +335,7 @@ function close_buttons() {
 function open_buttons() {
     var btns = document.querySelectorAll("button");
     for(var i = 0; i < btns.length; i++) {
+
         btns[i].disabled = false;
         btns[i].style.opacity = 1;
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -13,4 +13,70 @@
     <a href="views/graph.html">Graphs</a>
 
   </body>
+</html> -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>VisualWeave</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body>
+
+  <div class="heading">
+
+
+    <h1 class ="main-head">VisualWeave</h1>
+    <h3 class ="desc-head">Your Friendly Neighbourhood Data Structures And Algorithms</h3>
+
+  </div>
+  <div class="carousel">
+    <div class="card-container">
+      <div class="card">
+        <img class="card-img-top" src="static/images/stack.jpg" alt="Stack" style="height: 200px;">
+        <div class="card-body">
+          <h4 class="card-title">Stack</h4>
+          <p class="card-text">Stack is a based on LIFO principal. Last in first out.</p>
+          <a href="views/stack.html" class="btn btn-primary more">See More</a>
+        </div>
+      </div>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <img class="card-img-top" src="static/images/queue.jpg" alt="Queue" style="height: 200px;">
+        <div class="card-body">
+          <h4 class="card-title">Queue</h4>
+          <p class="card-text">Queue is a based on FIFO principal. First in first out.</p>
+          <a href="views/queue.html" class="btn btn-primary more">See More</a>
+        </div>
+      </div>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <img class="card-img-top" src="static/images/sort.jpg" alt="Sorting" style="height: 200px;">
+        <div class="card-body">
+          <h4 class="card-title">Sorting</h4>
+          <p class="card-text">I am smaller, let me go first.</p>
+          <a href="views/sorting.html" class="btn btn-primary more">See More</a>
+        </div>
+      </div>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <img class="card-img-top" src="static/images/graph.jpg" alt="Graph" style="height: 200px;">
+        <div class="card-body">
+          <h4 class="card-title">Graph</h4>
+          <p class="card-text">Ohh, there are too many ways to reach.</p>
+          <a href="views/graph.html" class="btn btn-primary more">See More</a>
+        </div>
+      </div>
+    </div>
+
+    <button class="nav left" onclick="prevSlide()"><i class="bi bi-chevron-left"></i></button>
+    <button class="nav right" onclick="nextSlide()"><i class="bi bi-chevron-right"></i></button>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/script.js" charset="utf-8"></script>
+</body>
 </html>

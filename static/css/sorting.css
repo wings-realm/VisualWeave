@@ -1,6 +1,6 @@
 body{
 
-  background-image: url("./images/board.jpg");
+  background-image: url("../images/board.jpg");
   background-color: black;
 
 }
@@ -43,6 +43,23 @@ h3{
   position: relative;
   bottom: 50px;
   font-weight: bold;
+}
+
+.back{
+  position: relative;
+  bottom: 30px;
+  font-weight: bold;
+  height: 3rem;
+}
+
+.volumebtn{
+  position: relative;
+  bottom: 50px;
+}
+
+.volume{
+  height: 30px;
+  width: 30px;
 }
 
 
