@@ -4,7 +4,6 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: "Poppins", sans-serif;
 }
 body {
 	height: 100vh;
@@ -15,8 +14,9 @@ body {
 	flex-direction: column;
 	gap: 20px;
 	background-color: rgb(231, 231, 231);
-	background-image: url(./3.jpg);
+	background-image: url("../images/stack.jpg");
 	background-size:100vw 100vh;
+	font-family: 'Montserrat', sans-serif;
 }
 header {
 	height: 100px;
@@ -36,8 +36,8 @@ header {
 	font-weight:bolder ;
 }
 .container {
-	height: 720px;
-	width: 1000px;
+	height: 45rem;
+	width: 62.5rem;
 	background-color: white;
 	box-shadow: 8px 8px 20px rgb(128, 128, 128);
 	position: relative;

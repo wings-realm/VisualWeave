@@ -5,8 +5,9 @@ body {
   display: flex;
   flex-direction: column;
   background-color:  rgb(231, 231, 231);
+  font-family: 'Montserrat', sans-serif;
   /* background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #ebae6c); */
-  background-image: url(./11.avif);
+  background-image: url("../images/graph.jpg");
   background-size: 100vw 100vh;
   align-items: center;
 }

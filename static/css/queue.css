@@ -4,7 +4,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: "Poppins", sans-serif;
+
 }
 body {
 	height: 100vh;
@@ -15,8 +15,9 @@ body {
 	flex-direction: column;
 	gap: 20px;
 	background-color: rgb(231, 231, 231);
-	background-image: url(./people-stand-queue-diverse-characters-waiting_107791-13965.avif);
-	background-size: 100vw 20vh;
+	background-image: url("../images/queue.jpg");
+	background-size: 100vw 100vh;
+	font-family: 'Montserrat', sans-serif;
 }
 header {
 	height: 100px;
