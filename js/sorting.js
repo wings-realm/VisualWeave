@@ -6,8 +6,12 @@ dispnum.innerHTML = number.value; // Display the default slider value
 dispspeed.innerHTML = speed.value;
 
 let audioCtx = null;
+let isFirstImage = true;
 
 function playNote(freq){
+  if(!isFirstImage){
+    freq = 0;
+  }
   if(audioCtx==null){
     audioCtx=new(
       AudioContext ||
@@ -27,13 +31,14 @@ function playNote(freq){
 }
 
 function mute(){
-  console.log(document.getElementById("volumeimage").src);
-  if(document.getElementById("volumeimage").src=="../static/images/medium-volume.png"){
 
-    document.getElementById("volumeimage").src="../static/images/mute.png";
-  }else{
-    document.getElementById("volumeimage").src="../static/images/medium-volume.png";
-  }
+  if (isFirstImage) {
+   document.getElementById("volumeimage").src = "../static/images/mute.png";
+ } else {
+   document.getElementById("volumeimage").src = "../static/images/medium-volume.png";
+ }
+ isFirstImage = !isFirstImage;
+
 }
 
 number.oninput = function() {
@@ -326,7 +331,8 @@ function close_buttons() {
         btns[i].disabled = true;
         btns[i].style.opacity = 0.5;
     }
-    document.querySelector(".volumebtn").disabled=false;
+    document.querySelectorAll(".volumebtn")[0].disabled=false;
+    document.querySelectorAll(".volumebtn")[0].style.opacity = 1;
     number.disabled = true;
     number.style.opacity = 0.5;
 

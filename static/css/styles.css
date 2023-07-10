@@ -1,4 +1,4 @@
-body {
+.main-body {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -123,4 +123,22 @@ body {
     position: fixed;
     top: 22rem;
     left: 8.5rem;
+  }
+
+  .footer{
+    background-color: #C1ECE4;
+    position: absolute;
+    height: 1.7rem;
+    width: 100vw;
+    bottom: 2px;
+    padding-top: 1px;
+
+    text-align: center;
+  }
+  .footer h2{
+    color: #862B0D;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 530;
+
   }
