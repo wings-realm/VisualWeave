@@ -4,19 +4,19 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
 }
 body {
 	height: 100vh;
 	width: 100vw;
-	display: flex;
+	display: inline-flex;
 	justify-content: start;
 	align-items: center;
 	flex-direction: column;
 	gap: 20px;
 	background-color: rgb(231, 231, 231);
-	background-image: url("../images/stack.jpg");
-	background-size:100vw 100vh;
-	font-family: 'Montserrat', sans-serif;
+	background-image: url(../images/stack.jpg);
+	background-image: 100vw 100vh;
 }
 header {
 	height: 100px;
@@ -36,8 +36,8 @@ header {
 	font-weight:bolder ;
 }
 .container {
-	height: 45rem;
-	width: 62.5rem;
+	height: 620px;
+	width: 1000px;
 	background-color: white;
 	box-shadow: 8px 8px 20px rgb(128, 128, 128);
 	position: relative;
@@ -70,9 +70,9 @@ header {
 .reset,
 .box,
 button {
-	height: 60px;
-	width: 150px;
-	font-size: 30px;
+	height: 50px;
+	width: 140px;
+	font-size: 25px;
 	background-color: green;
 	color: white;
 	border-radius: 10px;
@@ -96,7 +96,7 @@ button {
 
 .stack {
 	width: 500px;
-	height: 600px;
+	height: 470px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -106,7 +106,7 @@ button {
 }
 
 .main-stack-bucket {
-	height: 550px;
+	height: 450px;
 	width: 200px;
 	border-width: 0 4px 4px 4px;
 	border-color: black;
@@ -154,14 +154,9 @@ button {
 		background-color: rgb(255, 15, 59);
 	}
 }
-.sec1,
-.sec2,
-.sec3,
-.sec4{
-	margin-bottom: 20px;
-}
+
 .info {
-	height: 600px;
+	height: 470px;
 	width: 500px;
 	padding-left: 20px;
 }
@@ -176,9 +171,9 @@ button {
 }
 
 .message-box {
-	height: 200px;
+	height: 180px;
 	width: 400px;
-	margin-top: 40px;
+	margin-top: 30px;
 	padding: 10px;
 	border-radius: 10px;
 	background-color: bisque;
@@ -210,6 +205,9 @@ button {
 		background-color: rgb(255, 15, 59);
 	}
 }
-#back {
-	margin-top: 50px;
-  }
+#back{
+	position:fixed;
+	align-items: center;
+	top:50%;
+	right:4%;
+}
