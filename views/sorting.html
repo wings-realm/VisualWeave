@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sorting</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+      <link rel="stylesheet" href="../static/css/sorting.css">
+
+  </head>
+  <body>
+
+    <header>
+      <div class="navigation">
+  <span class="meth">
+      <button type="button" onclick="insertionSort()" class="btn btn-outline-primary method">Insertion Sort</button>
+  </span>
+  <span class="meth">
+    <button type="button" onclick="selectionSort()" class="btn btn-outline-secondary method">Selection Sort</button>
+  </span>
+  <span class="meth">
+    <button type="button" onclick="bubbleSort()" class="btn btn-outline-success method">Bubble Sort</button>
+  </span>
+  <span class="meth">
+    <button type="button" onclick="MergeSort()" class="btn btn-outline-danger method">Merge Sort</button>
+  </span>
+  <span class="meth">
+    <button type="button" onclick="quicks()" class="btn btn-outline-info method">Quick Sort</button>
+  </span>
+      <!-- <button type="button" class="btn btn-outline-warning method">Warning</button>
+      <button type="button" class="btn btn-outline-info method">Info</button>
+      <button type="button" class="btn btn-outline-light method">Light</button> -->
+
+      </div>
+    </header>
+
+    <img src="../static/images/goku.png" class="goku" id="gokut" alt="">
+
+    <div id="barContainer">
+        <div id="bars"></div>
+    </div>
+
+    <div class="quantity">
+
+      <div class="slidecontainer">
+          <input type="range" min="1" max="300" value="50" class="slider" id="number">
+          <h3 >Elements: <span id="dispnum"></span></h3>
+      </div>
+
+      <button type="button" onclick="arrnew()" id="resetbtn" class="btn btn-primary btn-lg reset">Shuffle</button>
+
+      <div class="slidecontainer">
+        <input type="range" min="1" max="100" value="50" class="slider" id="speed">
+        <h3 >Speed: <span id="dispspeed"></span></h3>
+      </div>
+
+    </div>
+
+
+
+  <script src="../js/sorting.js" charset="utf-8"></script>
+  </body>
+</html>

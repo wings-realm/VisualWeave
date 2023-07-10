@@ -1,0 +1,123 @@
+body{
+
+  background-image: url("./images/board.jpg");
+  background-color: black;
+
+}
+
+.navigation{
+
+  background-color: #331D2C;
+  height: 5rem;
+  width: 100%;
+
+
+}
+h3{
+  color: White;
+  font-weight: bold;
+}
+
+.method{
+  display: inline-flex;
+  margin: 20px 20px 30px 30px;
+
+}
+
+.meth{
+  width: 20%;
+  padding: 3.8rem;
+
+}
+
+.quantity{
+  width: 70%;
+  display: inline-flex;
+  position: fixed;
+  top: 38rem;
+  left: 15rem
+
+}
+
+.reset{
+  position: relative;
+  bottom: 50px;
+  font-weight: bold;
+}
+
+
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+  padding: 0 1rem;
+  align-self:auto;
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+#bars {
+    display: flex;
+    flex-direction: row;
+    /* align-items: flex-end; */
+    margin-left: 1rem;
+    margin-right: 1rem;
+    justify-content: center;
+}
+
+.bar {
+  background-color: cyan;
+  transition: 0.2s all ease;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.flex-item {
+  background: cyan;
+  border: 1pt solid black;
+
+  transition: 0.1s all ease;
+  max-width: 150px;
+}
+
+
+.goku{
+
+  position: fixed;
+  top: 120px;
+  left: 30px;
+  height: 30%;
+  transform: rotate(15deg);
+  display: block;
+  transition: opacity 1s ease-out;
+  transition: opacity 0.2s ease-in;
+  opacity: 0;
+
+}
