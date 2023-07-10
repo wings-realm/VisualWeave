@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible"
+		content="IE=edge">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0">
+	<title>Data Structure Visualization</title>
+	<link rel="stylesheet" href="../static/css/queue.css">
+</head>
+
+<body>
+	<!-- heading -->
+	<header>
+		<h1 class="heading">Data Structures</h1>
+		<h3 class="title">Queue Visualizer</h3>
+	</header>
+
+	<div class="container">
+		<div class="container-header">
+			<input type="number" class="text" required>
+			<button class="push">Push</button>
+			<button class="pop ">Pop Front</button>
+			<button class="reset">Reset</button>
+		</div>
+
+		<div class="container-body">
+			<div class="stack">
+				<div class="main-stack-bucket"></div>
+			</div>
+
+			<div class="info">
+				<div class="sec1">
+					<h3>Front of the Queue:-</h3>
+					<button class="box"></button>
+				</div>
+				<div class="sec2">
+					<h3>Last Pushed Item:-</h3>
+					<button class="box"></button>
+				</div>
+				<div class="sec3">
+					<h3>Last Popped Item:-</h3>
+					<button class="box"></button>
+				</div>
+				<div class="sec3">
+					<h3>Size of the Queue:-</h3>
+					<button class="box">11</button>
+				</div>
+
+				<div class="message-box">
+					<h2>Message Box</h2>
+					<div class="message"></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- script -->
+	<script src="../js/queue.js"></script>
+	<a id="back" href="../index.html"><button>Go Back</button></a>
+</body>
+
+</html>
